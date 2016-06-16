@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  playerRange: 5
+  playerRange: 9
   playerInRange: 0
   playerLayer:
     serializedVersion: 2

@@ -48,16 +48,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-#if UNITY_EDITOR
-        if (Input.GetKey(KeyCode.RightShift))
-        {
-            Time.timeScale = 0.1f;
-        }
-        else
-        {
-            Time.timeScale = 1.0f;
-        }
-#endif
         grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 
         //Moving
@@ -116,6 +106,11 @@ public class PlayerController : MonoBehaviour
                 Vector2 firePosition = firePoint.position;
                 Instantiate(fireBall, firePosition, firePoint.rotation);
             }
+        }
+        if(transform.position.y <= -60)
+        {
+            Reset();
+            instance.lives--;
         }
     }
 

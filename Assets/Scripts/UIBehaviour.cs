@@ -11,7 +11,7 @@ public class UIBehaviour : MonoBehaviour
 
     public void QuitGame()
     {
-        SceneManager.UnloadScene( SceneManager.GetActiveScene().buildIndex );
+        Application.Quit();
     }
 
     public void Restart()

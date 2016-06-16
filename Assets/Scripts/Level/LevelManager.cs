@@ -61,9 +61,8 @@ public class LevelManager : MonoBehaviour
 
         if(currentTime <= 0.0f)
         {
-            player.enabled = false;
-            playerCam.isFollowing = false;
-            currentTime = 0.0f;
+            SceneManager.LoadScene("Final Ui");
+            Time.timeScale = 0;
         }
 
         if(player.isDead == true)
